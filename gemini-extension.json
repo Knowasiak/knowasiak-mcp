@@ -1,6 +1,6 @@
 {
   "name": "knowasiak",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Knowasiak's business community in Gemini CLI: find businesses, people and posts, Discover people worth following, see who is where on the people map, and read profiles, posts and help guides in full. No sign-in.",
   "mcpServers": {
     "knowasiak": {
