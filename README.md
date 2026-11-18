@@ -1,26 +1,38 @@
-# Knowasiak for AI assistants
+# Knowasiak for AI agents
 
-[Knowasiak](https://knowasiak.com) is an online business community where founders and business owners learn, connect and share. This repository connects it to Gemini CLI. The same MCP server works in any MCP client.
+[Knowasiak](https://knowasiak.com) is an online business community where founders and business owners learn, connect and share. This repository is the Knowasiak plugin for AI agents, in the [Agent Plugins](https://agent-plugins.org) format (Cursor, ChatGPT/Codex and other clients), plus a Gemini CLI extension.
 
-## Gemini CLI
+## What's inside
+
+| File | What it is |
+|---|---|
+| `plugin.json` | Agent Plugins manifest |
+| `mcp.json` | Two remote MCP servers (Streamable HTTP): `knowasiak` (no sign-in) and `knowasiak-account` (the member's own account, OAuth sign-in on knowasiak.com) |
+| `skills/find-businesses` | Find and compare suppliers, agencies and partners, by what they do and where |
+| `skills/meet-people` | Discover people worth following, people like someone, and who is in a city |
+| `skills/act-for-me` | Post, comment, follow and message for the signed-in member, always after showing them first |
+| `gemini-extension.json`, `GEMINI.md` | Gemini CLI extension |
+
+## Install
+
+**Cursor and other Agent Plugins clients:** add this repository as a plugin (`https://github.com/Knowasiak/knowasiak-mcp`).
+
+**Gemini CLI:**
 
 ```bash
 gemini extensions install https://github.com/Knowasiak/knowasiak-mcp
 ```
 
-Then ask, for example: "Find a packaging supplier in Sydney on Knowasiak", "Who on Knowasiak is in Dubai and here to meet people?", "How does the Knowasiak feed rank posts?"
+**Any MCP client:** add `https://knowasiak.com/mcp` as a remote MCP server (Streamable HTTP, no auth). For the member's own account use `https://knowasiak.com/mcp/account`; the client opens Knowasiak's sign-in page the first time.
 
-## Any other MCP client
+Then ask, for example: "Find a packaging supplier in Sydney on Knowasiak", "Which businesses on Knowasiak are in Dubai?", "Find people like @AdityaGaurav on Knowasiak".
 
-| Address | Sign-in | What it does |
-|---|---|---|
-| `https://knowasiak.com/mcp` | None | Search businesses, people, posts and help; Discover; the people map; read anything public in full |
-| `https://knowasiak.com/mcp/account` | Your Knowasiak account (OAuth 2.1) | All of the above for you, plus your profile, numbers, posts, notifications and messages; post, comment, follow, message (it shows you first) |
+## Tools
 
-Transport: Streamable HTTP. Tools, limits and privacy: https://knowasiak.com/help/connect-your-ai-assistant. Server card: https://knowasiak.com/.well-known/mcp/server-card.json.
+No sign-in: `find_businesses`, `search`, `fetch`, `latest_posts`, `discover_people`, `person_details`, `people_map`, `people_in_place`. Help guides are MCP resources; a few prompts are included.
 
-## Tools (no sign-in)
+Member account (adds): `get_my_profile`, `get_my_stats`, `list_my_posts`, `create_post`, `comment_on_post`, `mark_useful`, `update_my_profile`, `follow`, `unfollow`, `list_my_connections`, `my_network_map`, `list_notifications`, `list_saved_posts`, `list_conversations`, `read_conversation`, `send_message`.
 
-`find_businesses`, `search`, `fetch`, `latest_posts`, `discover_people`, `person_details`, `people_map`, `people_in_place`. Help guides are also MCP resources, and there are a few prompts.
+Everything follows the site's rules, with hourly limits for assistants. Nothing deletes anything. Details, limits and privacy: https://knowasiak.com/help/connect-your-ai-assistant · Server card: https://knowasiak.com/.well-known/mcp/server-card.json · Official MCP Registry: `com.knowasiak/knowasiak`.
 
 Support: support@knowasiak.com
