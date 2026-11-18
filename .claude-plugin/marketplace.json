@@ -1,0 +1,14 @@
+{
+  "name": "knowasiak",
+  "owner": {
+    "name": "Knowasiak",
+    "email": "support@knowasiak.com"
+  },
+  "plugins": [
+    {
+      "name": "knowasiak",
+      "source": "./",
+      "description": "Find businesses, suppliers and founders on Knowasiak, and act on your own Knowasiak account."
+    }
+  ]
+}

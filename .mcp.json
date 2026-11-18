@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "knowasiak": {
+      "type": "http",
+      "url": "https://knowasiak.com/mcp"
+    },
+    "knowasiak-account": {
+      "type": "http",
+      "url": "https://knowasiak.com/mcp/account"
+    }
+  }
+}

@@ -11,11 +11,21 @@
 | `skills/find-businesses` | Find and compare suppliers, agencies and partners, by what they do and where |
 | `skills/meet-people` | Discover people worth following, people like someone, and who is in a city |
 | `skills/act-for-me` | Post, comment, follow and message for the signed-in member, always after showing them first |
+| `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `.mcp.json` | Claude Code plugin, and this repo as its own plugin marketplace |
 | `gemini-extension.json`, `GEMINI.md` | Gemini CLI extension |
 
 ## Install
 
 **Cursor and other Agent Plugins clients:** add this repository as a plugin (`https://github.com/Knowasiak/knowasiak-mcp`).
+
+**Claude Code:**
+
+```bash
+claude plugin marketplace add Knowasiak/knowasiak-mcp
+claude plugin install knowasiak@knowasiak
+```
+
+**Claude (claude.ai and the desktop app):** Settings → Connectors → Add custom connector, URL `https://knowasiak.com/mcp`.
 
 **Gemini CLI:**
 
