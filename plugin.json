@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "knowasiak",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Knowasiak's business community in your AI agent: find businesses, suppliers and founders, Discover people worth following, see who is where on the people map, and read public profiles, posts and help guides in full. No sign-in for reading; connect a member account to post, comment, follow and message.",
   "author": {
     "name": "Knowasiak",
